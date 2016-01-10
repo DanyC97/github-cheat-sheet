@@ -1,4 +1,4 @@
-# GitHubカンニング・ペーパー
+# GitHubカンニング・ペーパー [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 これはGitやGitHubの隠された機能やよく知られていない機能の一覧だ。[Zach Holman](https://github.com/holman)によるAloha Ruby Conference 2012での[Git and GitHub Secrets](https://github.com/tiimgreen/github-cheat-sheet)（[スライド](https://github.com/tiimgreen/github-cheat-sheet)）とWDCNZ 2013での[More Git and GitHub Secrets](https://vimeo.com/72955426)（[スライド](https://speakerdeck.com/holman/more-git-and-github-secrets)）の二つのトークを元にしている。
 
 *短縮URL: [`http://git.io/sheet`](http://git.io/sheet)*
@@ -755,8 +755,6 @@ $ git commit -m "Big-ass commit" --allow-empty
  - リポジトリを利用して誰かと連絡を取りたい時
  - リポジトリへの最初のコミットをやり直しできるようにしたい時: `git commit -m "init repo" --allow-empty`.
 
-![It ain't even that trolololol...](http://i.minus.com/il1jaw.gif)
-
 ### Gitステータスのスタイリング
 普通に実行すると:
 
@@ -982,7 +980,6 @@ $ git config --global color.ui 1
 | Everyday Git | http://git-scm.com/docs/everyday |
 | Git Immersion | http://gitimmersion.com/ |
 | Ry's Git Tutorial | http://rypress.com/tutorials/git/index.html |
-| Git for Designers | http://hoth.entp.com/output/git_for_designers.html |
 | Git for Computer Scientists | http://eagain.net/articles/git-for-computer-scientists/ |
 | Git Magic | http://www-cs-students.stanford.edu/~blynn/gitmagic/ |
 | GitHub Training Kit | http://training.github.com/kit |

@@ -1,4 +1,4 @@
-# GitHub秘籍
+# GitHub秘籍 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 Git 和 Github 秘籍，灵感来自于 [Zach Holman](https://github.com/holman) 在 2012 年 Aloha Ruby Conference 和 2013 年 WDCNZ 上所做的演讲：[Git and GitHub Secrets](http://www.confreaks.com/videos/1229-aloharuby2012-git-and-github-secrets)([slides](https://speakerdeck.com/holman/git-and-github-secrets)) 和 [More Git and GitHub Secrets](https://vimeo.com/72955426)([slides](https://speakerdeck.com/holman/more-git-and-github-secrets))。
 
 *其他语言版本: [English](README.md), [한국어](README.ko.md), [日本語](README.ja.md), [简体中文](README.zh-cn.md), [正體中文](README.zh-tw.md).*
@@ -189,7 +189,7 @@ $ git clone https://gist.github.com/tiimgreen/10545817
 
 ![Gists](http://i.imgur.com/BcFzabp.png)
 
-这意味着你可以像 Github 仓库一样修改和更新 Gists : 
+这意味着你可以像 Github 仓库一样修改和更新 Gists :
 
 ```bash
 $ git commit
@@ -605,7 +605,7 @@ On branch master
 Changes not staged for commit:
 	deleted:    a
 	deleted:    c
-	
+
 $ git rm $(git ls-files -d)
 rm 'a'
 rm 'c'
@@ -717,8 +717,6 @@ $ git commit -m "Big-ass commit" --allow-empty
  - 跟使用你仓库的其他人交流。
  - 作为仓库的第一次提交，因为第一次提交后不能被 rebase： `git commit -m "init repo" --allow-empty`.
 
- ![It ain't even that trolololol...](http://i.minus.com/il1jaw.gif)
-
 ### 美化 Git Status
 在命令行输入如下命令:
 
@@ -782,7 +780,7 @@ $ git show :/typo
 $ git branch --merged
 ```
 
-这会显示所有已经合并到你当前分支的分支列表。 
+这会显示所有已经合并到你当前分支的分支列表。
 
 相反地：
 
@@ -913,7 +911,6 @@ $ git config --global color.ui 1
 | Everyday Git | http://git-scm.com/docs/everyday |
 | Git Immersion | http://gitimmersion.com/ |
 | Ry's Git Tutorial | http://rypress.com/tutorials/git/index.html |
-| Git for Designer | http://hoth.entp.com/output/git_for_designers.html |
 | Git for Computer Scientists | http://eagain.net/articles/git-for-computer-scientists/ |
 | Git Magic | http://www-cs-students.stanford.edu/~blynn/gitmagic/ |
 | GitHub Training Kit | http://training.github.com/kit |

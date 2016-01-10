@@ -1,4 +1,4 @@
-# GitHub秘笈
+# GitHub秘笈 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 Git 和 Github 秘笈，靈感來自於 [Zach Holman](https://github.com/holman) 在 2012 年 Aloha Ruby Conference 和 2013 年 WDCNZ 上所做的演講：[Git and GitHub Secrets](http://www.confreaks.com/videos/1229-aloharuby2012-git-and-github-secrets)([slides](https://speakerdeck.com/holman/git-and-github-secrets)) 和 [More Git and GitHub Secrets](https://vimeo.com/72955426)([slides](https://speakerdeck.com/holman/more-git-and-github-secrets))。
 
 *其他語言版本: [English](README.md), [한국어](README.ko.md), [日本語](README.ja.md), [簡體中文](README.zh-cn.md), [正體中文](README.zh-tw.md).*
@@ -50,11 +50,13 @@ Git 和 Github 秘笈，靈感來自於 [Zach Holman](https://github.com/holman)
     - [從工作區去除大量已刪除文件](#從工作區去除大量已刪除文件)
     - [上一個分支](#上一個分支)
     - [去除空白](#去除空白)
+    - [SSH 金鑰](#ssh-金鑰)
     - [檢出 Pull Requests](#檢出-pull-requests)
     - [沒有任何改動的提交](#沒有任何改動的提交)
     - [美化 Git Status](#美化-git-status)
     - [美化 Git Log](#美化-git-log)
     - [Git 查詢](#git-查詢)
+    - [Git Grep](#git-grep)
     - [合併分支](#合併分支)
     - [修復有問題的提交以及自動合併](#修復有問題的提交以及自動合併)
     - [以網站方式查看本地倉庫](#以網站方式查看本地倉庫)
@@ -189,7 +191,7 @@ $ git clone https://gist.github.com/tiimgreen/10545817
 
 ![Gists](http://i.imgur.com/BcFzabp.png)
 
-這意味著你可以像 Github 倉庫一樣修改和更新 Gists : 
+這意味著你可以像 Github 倉庫一樣修改和更新 Gists :
 
 ```bash
 $ git commit
@@ -605,7 +607,7 @@ On branch master
 Changes not staged for commit:
 	deleted:    a
 	deleted:    c
-	
+
 $ git rm $(git ls-files -d)
 rm 'a'
 rm 'c'
@@ -649,7 +651,21 @@ $ git stripspace < README.md
 
 [*進一步了解 Git `stripspace` 命令.*](http://git-scm.com/docs/git-stripspace)
 
+### SSH 金鑰
+
+您可以藉由下面網址得到全部公開的 ssh 金鑰:
+
+```
+https://github.com/{user}.keys
+```
+
+範例：[https://github.com/tiimgreen.keys](https://github.com/tiimgreen.keys)
+
+[*更多詳細 SSH 金鑰資訊...*](https://changelog.com/github-exposes-public-ssh-keys-for-its-users/)
+
+
 ### 檢出 Pull Requests
+
 對 Github 倉庫來說，Pull Request 是種特殊分支， 可以通過以下多種方式取到本地：
 
 取出某個特定的 Pull Request 並臨時作為本地的 `FETCH_HEAD` 中以便進行快速查看更改( diff )以及合併( merge )：
@@ -717,8 +733,6 @@ $ git commit -m "Big-ass commit" --allow-empty
  - 跟使用你倉庫的其他人交流。
  - 作為倉庫的第一次提交，因為第一次提交後不能被 rebase： `git commit -m "init repo" --allow-empty`.
 
- ![It ain't even that trolololol...](http://i.minus.com/il1jaw.gif)
-
 ### 美化 Git Status
 在命令行輸入如下命令:
 
@@ -775,14 +789,42 @@ $ git show :/typo
 
 * 按 `q` 鍵退出命令。*
 
+### Git Grep
+
+Git Grep 將顯示匹配字串的行號。
+
+執行:
+
+```bash
+$ git grep aliases
+```
+會找出檔案內有出現 *aliases* 字串。
+
+![git grep aliases](http://i.imgur.com/DL2zpQ9.png)
+
+* 按 `q` 結束搜尋*
+
+你也可以使用多重 flags 來達到進階搜尋。範例:
+
+ * `-e` 下一個搜尋匹配條件 (e.g. regex)
+ * `--and`, `--or` and `--not` 合併多重匹配字串.
+
+使用如下：
+```bash
+ $ git grep -e pattern --and -e anotherpattern
+```
+
+[*更多詳細 Git `grep` 指令介紹*](http://git-scm.com/docs/git-grep)
+
 ### 合併分支
+
 輸入命令:
 
 ```bash
 $ git branch --merged
 ```
 
-這會顯示所有已經合併到你當前分支的分支列表。 
+這會顯示所有已經合併到你當前分支的分支列表。
 
 相反地：
 
@@ -913,7 +955,6 @@ $ git config --global color.ui 1
 | Everyday Git | http://git-scm.com/docs/everyday |
 | Git Immersion | http://gitimmersion.com/ |
 | Ry's Git Tutorial | http://rypress.com/tutorials/git/index.html |
-| Git for Designer | http://hoth.entp.com/output/git_for_designers.html |
 | Git for Computer Scientists | http://eagain.net/articles/git-for-computer-scientists/ |
 | Git Magic | http://www-cs-students.stanford.edu/~blynn/gitmagic/ |
 | GitHub Training Kit | http://training.github.com/kit |
